@@ -1,5 +1,6 @@
 let timer = document.querySelector('.timer')
 let footer = document.querySelector('.footer')
+let style = true 
 
 
  
@@ -122,13 +123,14 @@ const countDown = () => {
         seconds: Math.floor((difference / 1000) % 60),
         
         };
-      
         updateCount(parts)
     }
 }
 
 const updateCount = (time) => {
+
    
+
     let day = document.getElementById('days')
         day.innerText = `${time.days}`
     let hours = document.getElementById('hours')
@@ -137,6 +139,20 @@ const updateCount = (time) => {
         minutes.innerText = `${time.minutes}`
     let seconds = document.getElementById('seconds')
          seconds.innerText = `${time.seconds}`
+        
+    // if(style === true ){
+    //    let box = document.querySelector('.box')
+    //         box.style.background = 'linear-gradient(to bottom,  #343550 50%, #2c2c44 50%)'
+    //         style = false
+    // //         perspective: 1000px; 
+    // // background: linear-gradient(to bottom,  #343550 50%, #2c2c44 50%);
+    // // transform: rotateX(360deg);
+    // }
+    // else{
+    //     let box = document.querySelector('.box')
+    //     box.style.background = 'linear-gradient(to bottom, #2c2c44 50%, #343550 50%)'
+    //     style = true
+    // }
 }
 
 setInterval(countDown, 1000)

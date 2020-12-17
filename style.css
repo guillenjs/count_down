@@ -55,7 +55,7 @@ body {
    transition: all 0.5s ease;
 }
 
-.box:hover {
+.box:enabled {
     perspective: 1000px; 
     background: linear-gradient(to bottom,  #343550 50%, #2c2c44 50%);
     transform: rotateX(360deg);

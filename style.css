@@ -13,7 +13,7 @@ body {
     margin-top: 10%;
     font-family: "Gill Sans", sans-serif;;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 18px;
     line-height: 21px;
     letter-spacing: 7px;
@@ -21,17 +21,28 @@ body {
 
 .timer {
     display: flex;
+    flex-shrink: 3;
     align-items: center;
     justify-content: center;
     margin-top: 5%;
     padding: 0 10px 0 10px;
+
+}
+
+.outer {
+    margin: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
 }
 
 .box {
     background-color: white;
-    height: 150px;
-    min-height: 50px;
-    width: 150px;
+    height: 100%;
+    /* min-height: 50px; */
+  
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -39,7 +50,13 @@ body {
     background: linear-gradient(to bottom,  #2c2c44 50%, #343550 50%);
    margin-right: 1.5%;
    margin-left: 1.5%;
-   box-shadow: 0px 10px 5px black;
+   box-shadow: 0px 10px 0px hsl(234, 17%, 12%);
+}
+
+p{
+    letter-spacing: 7px;
+    font-size: 15px;
+    color: hsl(237, 18%, 59%);
 }
 
 .cornerCut {
@@ -70,4 +87,6 @@ body {
     bottom: 0;
     width: 100%;
     display:flex;
+    align-items: center;
+    justify-content: center;
 }

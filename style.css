@@ -1,0 +1,73 @@
+body {
+ background-color: #201C2A;
+ background-image: url('images/bg-stars.svg');
+ font-family: "Gill Sans", sans-serif;;
+ color: white;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 10%;
+    font-family: "Gill Sans", sans-serif;;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 7px;
+}
+
+.timer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+    padding: 0 10px 0 10px;
+}
+
+.box {
+    background-color: white;
+    height: 150px;
+    min-height: 50px;
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    background: linear-gradient(to bottom,  #2c2c44 50%, #343550 50%);
+   margin-right: 1.5%;
+   margin-left: 1.5%;
+   box-shadow: 0px 10px 5px black;
+}
+
+.cornerCut {
+    height: 20px;
+    width: 10px;
+    background-color: #201C2A;
+    border-radius: 0px 100px 100px 0 ;
+
+}
+
+.cornerCut2 {
+    height: 20px;
+    width: 10px;
+    background-color: #201C2A;
+    border-radius: 100px 0px 0px 100px;
+    
+}
+
+.text {
+    font-size: 80px;
+    padding: 10px;
+    color: #f55f85;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    display:flex;
+}

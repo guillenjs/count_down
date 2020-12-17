@@ -7,7 +7,7 @@ let footerImage = document.createElement('img')
     footerImage.src = 'images/pattern-hills.svg'
     footer.append(footerImage)
 
-
+  
 const boxes = () => {
 
 //first box
@@ -28,8 +28,9 @@ const boxes = () => {
     cornerCut.className = 'cornerCut'
 
     let textDiv = document.createElement('div')
-        textDiv.innerText = '01'
+        textDiv.innerText = `0`
         textDiv.className = 'text'
+        textDiv.id = 'days'
 
     let cornerCut2 = document.createElement('div')
     cornerCut2.className = 'cornerCut2'
@@ -51,8 +52,9 @@ let outer2 = document.createElement('div')
     cornerCut3.className = 'cornerCut'
 
     let textDiv2 = document.createElement('div')
-        textDiv2.innerText = '25'
+        textDiv2.innerText = `0`
         textDiv2.className = 'text'
+        textDiv2.id = 'hours'
 
     let cornerCut4 = document.createElement('div')
     cornerCut4.className = 'cornerCut2'
@@ -74,8 +76,9 @@ let outer3 = document.createElement('div')
     cornerCut5.className = 'cornerCut'
 
     let textDiv3 = document.createElement('div')
-    textDiv3.innerText = '18'
+    textDiv3.innerText = `0`
     textDiv3.className = 'text'
+    textDiv3.id = 'minutes'
 
     let cornerCut6 = document.createElement('div')
     cornerCut6.className = 'cornerCut2'
@@ -88,7 +91,7 @@ let outer4= document.createElement('div')
     let box4 = document.createElement('div')
     box4.className = 'box'
     let label4 = document.createElement('p')
-        label4.innerText = 'Hours'
+        label4.innerText = 'seconds'
         outer4.append(box4, label4)
     timer.append(outer4)
 
@@ -96,8 +99,9 @@ let outer4= document.createElement('div')
     cornerCut7.className = 'cornerCut'
 
     let textDiv4 = document.createElement('div')
-    textDiv4.innerText = '25'
+    textDiv4.innerText = `0`
     textDiv4.className = 'text'
+    textDiv4.id = 'seconds'
 
     let cornerCut8 = document.createElement('div')
     cornerCut8.className = 'cornerCut2'
@@ -105,9 +109,41 @@ let outer4= document.createElement('div')
 
 }
 
-
-
 boxes()
+
+const countDown = () => {
+    const difference = +new Date("2021-01-01") - +new Date();
+    console.log(difference)
+    if (difference > 0) {
+        const parts = {
+        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+        minutes: Math.floor((difference / 1000 / 60) % 60),
+        seconds: Math.floor((difference / 1000) % 60),
+        
+        };
+      
+        updateCount(parts)
+    }
+}
+
+const updateCount = (time) => {
+   
+    let day = document.getElementById('days')
+        day.innerText = `${time.days}`
+    let hours = document.getElementById('hours')
+        hours.innertime = `${time.hours}`
+    let minutes = document.getElementById('minutes')
+        minutes.innerText = `${time.minutes}`
+    let seconds = document.getElementById('seconds')
+         seconds.innerText = `${time.seconds}`
+}
+
+setInterval(countDown, 1000)
+
+
+
+
 
 
 

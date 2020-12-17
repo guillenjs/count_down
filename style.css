@@ -51,7 +51,18 @@ body {
    margin-right: 1.5%;
    margin-left: 1.5%;
    box-shadow: 0px 10px 0px hsl(234, 17%, 12%);
+   transform-style: preserve-3d;
+   transition: all 0.5s ease;
 }
+
+.box:hover {
+    perspective: 1000px; 
+    background: linear-gradient(to bottom,  #343550 50%, #2c2c44 50%);
+    transform: rotateX(360deg);
+}
+
+
+
 
 p{
     letter-spacing: 7px;
